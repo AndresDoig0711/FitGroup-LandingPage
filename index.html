@@ -705,3 +705,37 @@
                     </article>
                 </div>
             </section>
+// Activate / deactivate the theme manually with the button
+themeButton.addEventListener('click', () => {
+    // Add or remove the dark / icon theme
+    document.body.classList.toggle(darkTheme)
+    themeButton.classList.toggle(iconTheme)
+    // We save the theme and the current icon that the user chose
+    localStorage.setItem('selected-theme', getCurrentTheme())
+    localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.home__data, .svg__img svg__color home__img,
+
+            .about__data, .svg__img svg__color about__img,
+
+            .security__data, .svg__img svg__color,
+
+            .section__title, .services__data,
+
+            .app__data, .svg__img svg__color app__img,
+
+            .contact__content, .contact__address, .contact__content boton,
+
+
+            .footer__content, .footer__social`, {
+    interval: 200
+})
