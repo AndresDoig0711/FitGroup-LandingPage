@@ -1,3 +1,2 @@
-# FitGroup-Website
- IHC Website LandingPage 
- Grupo 3 | SI42
+# FitGroup-LandingPage 
+SI653-2201-ES3C
