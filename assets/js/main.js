@@ -151,3 +151,14 @@ window.onclick = function(event) {
 
 
 //DIEGO
+//LANGUANGE CHANGER
+
+function change(){
+  var select = document.getElementById('language');
+  var value = select.options[select.selectedIndex].value;
+  if(value === "es-ES"){
+    location.replace("index.html");
+  }else if (value === "en-US") {
+    location.replace("indexEN.html");
+  }
+}
