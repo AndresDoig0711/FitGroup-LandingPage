@@ -29,7 +29,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction))
 
 //NICOLE
 
-/=============== SCROLL SECTIONS ACTIVE LINK ===============/
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -41,9 +41,9 @@ function scrollActive(){
               sectionId = current.getAttribute('id')
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.navmenu a[href*=' + sectionId + ']').classList.add('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active-link')
         }else{
-            document.querySelector('.navmenu a[href*=' + sectionId + ']').classList.remove('active-link')
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active-link')
         }
     })
 }
@@ -51,7 +51,7 @@ window.addEventListener('scroll', scrollActive)
 
 //ALDAIR
 
-/=============== CHANGE BACKGROUND HEADER ===============/
+/*=============== CHANGE BACKGROUND HEADER ===============*/
 function scrollHeader(){
     const nav = document.getElementById('header')
     // When the scroll is greater than 80 viewport height, add the scroll-header class to the header tag
@@ -59,7 +59,7 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-/=============== SHOW SCROLL UP ===============/
+/*=============== SHOW SCROLL UP ===============*/
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
@@ -67,7 +67,8 @@ function scrollUp(){
 }
 window.addEventListener('scroll', scrollUp)
 
-//DIEGO
+//MATHYU
+
 /*=============== DARK LIGHT THEME ===============*/
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
@@ -87,6 +88,8 @@ if (selectedTheme) {
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
   themeButton.classList[selectedIcon === 'bx-toggle-left' ? 'add' : 'remove'](iconTheme)
 }
+
+//DIEGO
 
 // Activate / deactivate the theme manually with the button
 themeButton.addEventListener('click', () => {
@@ -122,6 +125,7 @@ sr.reveal(`.home__data, .svg__img svg__color home__img,
             .footer__content, .footer__social`, {
     interval: 200
 })
+//ANDRES
 
 // Get the modal
 var modal = document.getElementById("myModal");
@@ -150,6 +154,36 @@ window.onclick = function(event) {
 }
 
 
+//MATHYU
+
+// Get the modal
+var modal = document.getElementById("myModal2");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close2")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+//NICOLE
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 //DIEGO
 //LANGUANGE CHANGER
 
@@ -162,3 +196,5 @@ function change(){
     location.replace("indexEN.html");
   }
 }
+
+
